@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tunideli — Livraison rapide en Tunisie</title>
+<meta name="description" content="Tunideli — la plateforme tunisienne de collecte et de livraison de colis. Des boutiques vers vos clients, partout en Tunisie." />
+<style>
+  :root{
+    --red:#E70013; --red-dark:#b3000f; --ink:#151515; --muted:#5d5d5d;
+    --bg:#ffffff; --soft:#fff5f5; --line:#eeeeee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.5px}
+  .brand .dot{width:30px;height:30px;border-radius:8px;background:var(--red);display:grid;place-items:center;color:#fff;font-size:16px}
+  .nav-links{display:flex;gap:28px}
+  .nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--red)}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:700;font-size:15px;transition:.2s}
+  .btn:hover{background:var(--red-dark)}
+  .btn.ghost{background:transparent;color:var(--red);border:2px solid var(--red)}
+  .btn.ghost:hover{background:var(--soft)}
+  .hero{padding:84px 0 64px;background:linear-gradient(180deg,var(--soft),#fff)}
+  .hero h1{font-size:clamp(34px,6vw,60px);line-height:1.05;letter-spacing:-1.5px;font-weight:850;max-width:14ch}
+  .hero h1 span{color:var(--red)}
+  .hero p{margin:22px 0 30px;font-size:19px;color:var(--muted);max-width:52ch}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .stats{display:flex;gap:44px;margin-top:56px;flex-wrap:wrap}
+  .stat b{display:block;font-size:32px;color:var(--red);font-weight:850}
+  .stat span{color:var(--muted);font-size:14px;font-weight:600}
+  section{padding:72px 0}
+  .eyebrow{color:var(--red);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:13px}
+  h2{font-size:clamp(26px,4vw,40px);letter-spacing:-1px;margin:8px 0 10px;font-weight:820}
+  .lead{color:var(--muted);font-size:17px;max-width:60ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:40px}
+  .card{border:1px solid var(--line);border-radius:16px;padding:28px;transition:.2s;background:#fff}
+  .card:hover{border-color:var(--red);box-shadow:0 10px 30px rgba(231,0,19,.08);transform:translateY(-3px)}
+  .card .ic{width:48px;height:48px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:40px}
+  .step{position:relative;padding:28px;border-radius:16px;background:var(--soft)}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:24px;width:36px;height:36px;background:var(--red);color:#fff;border-radius:10px;display:grid;place-items:center;font-weight:800}
+  .step h3{margin:12px 0 6px;font-size:18px}
+  .step p{color:var(--muted);font-size:15px}
+  .apps{background:var(--ink);color:#fff;border-radius:24px;padding:56px;display:flex;gap:40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .apps h2{color:#fff}
+  .apps p{color:#c9c9c9;max-width:46ch;margin-top:10px}
+  .store{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+  .store a{display:flex;align-items:center;gap:10px;background:#222;border:1px solid #333;border-radius:12px;padding:12px 20px;color:#fff;text-decoration:none;font-weight:600}
+  .store a:hover{border-color:var(--red)}
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  @media(max-width:640px){.nav-links{display:none}.apps{padding:32px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand"><span class="dot">🚚</span> Tunideli</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#comment">Comment ça marche</a>
+        <a href="#apps">Applications</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn" href="#contact">Devenir partenaire</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Livraison • Tunisie 🇹🇳</span>
+      <h1>De la boutique <span>à votre client</span>, partout en Tunisie.</h1>
+      <p>Tunideli collecte les colis chez vos commerçants et les livre à vos clients — paiement à la livraison, suivi en temps réel et gestion complète depuis une seule plateforme.</p>
+      <div class="cta-row">
+        <a class="btn" href="#apps">Télécharger l'application</a>
+        <a class="btn ghost" href="#contact">Nous contacter</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>24 gouvernorats</b><span>Couverture nationale</span></div>
+        <div class="stat"><b>COD</b><span>Paiement à la livraison</span></div>
+        <div class="stat"><b>Temps réel</b><span>Suivi GPS des colis</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <span class="eyebrow">Nos services</span>
+      <h2>Tout ce qu'il faut pour livrer</h2>
+      <p class="lead">Une solution complète pensée pour les commerçants et les livreurs tunisiens.</p>
+      <div class="grid">
+        <div class="card"><div class="ic">📦</div><h3>Collecte chez le marchand</h3><p>Ramassage planifié des colis directement dans vos boutiques et entrepôts.</p></div>
+        <div class="card"><div class="ic">💵</div><h3>Paiement à la livraison</h3><p>Encaissement COD sécurisé et reversement transparent aux marchands.</p></div>
+        <div class="card"><div class="ic">📍</div><h3>Suivi en temps réel</h3><p>Localisation GPS du livreur et statut du colis à chaque étape.</p></div>
+        <div class="card"><div class="ic">🏬</div><h3>Réseau de hubs</h3><p>Tri et transfert entre hubs pour une couverture de tout le territoire.</p></div>
+        <div class="card"><div class="ic">🧾</div><h3>Factures &amp; statements</h3><p>Comptabilité, portefeuille marchand et rapports détaillés automatisés.</p></div>
+        <div class="card"><div class="ic">🔔</div><h3>Notifications</h3><p>Alertes push et SMS pour le marchand, le livreur et le client final.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comment" style="background:var(--soft)">
+    <div class="wrap">
+      <span class="eyebrow">Comment ça marche</span>
+      <h2>Simple, en quatre étapes</h2>
+      <div class="steps">
+        <div class="step"><h3>Créer le colis</h3><p>Le marchand saisit la commande et l'adresse du client dans l'application.</p></div>
+        <div class="step"><h3>Collecte</h3><p>Un livreur Tunideli récupère le colis à la boutique.</p></div>
+        <div class="step"><h3>Livraison</h3><p>Le colis est livré au client avec encaissement COD si nécessaire.</p></div>
+        <div class="step"><h3>Règlement</h3><p>Le marchand est payé et suit tout depuis son tableau de bord.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="wrap">
+      <div class="apps">
+        <div>
+          <span class="eyebrow" style="color:#ff8a93">Applications mobiles</span>
+          <h2>Marchand &amp; Livreur</h2>
+          <p>Deux applications dédiées : une pour les commerçants (créer et suivre les colis, portefeuille, factures) et une pour les livreurs (tournées, scan, encaissement COD, navigation).</p>
+          <div class="store">
+            <a href="#contact">▶ Google Play <small>(bientôt)</small></a>
+            <a href="#contact"> App Store <small>(bientôt)</small></a>
+          </div>
+        </div>
+        <div style="font-size:120px;line-height:1">📱</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap" style="text-align:center">
+      <span class="eyebrow">Contact</span>
+      <h2>Prêt à livrer avec Tunideli&nbsp;?</h2>
+      <p class="lead" style="margin:10px auto 26px">Rejoignez le réseau de livraison tunisien. Écrivez-nous pour devenir marchand ou livreur partenaire.</p>
+      <a class="btn" href="mailto:contact@tunideli.tn">contact@tunideli.tn</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 Tunideli — Dhia Driss. Tous droits réservés.</div>
+    <div>Tunis, Tunisie 🇹🇳 · Livraison &amp; logistique</div>
+  </div>
+</footer>
+</body>
+</html>
